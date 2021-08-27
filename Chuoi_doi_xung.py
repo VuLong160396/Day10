@@ -8,7 +8,7 @@ if add > 0:
     before = Enter[None:origin] #Vị trí nửa đầu trái phần tử (None) đến phần tử trung tâm
     after = Enter[origin+1:None]#Vị trí nửa sau phần tử trung tâm đến phần tử cuối cùng (None)
     # print(before)
-    # print(after)
+    # print(after) 
     if before == after[::-1]:#Đảo ký tự của chuỗi after
         print('Đây là chuỗi đối xứng')
     else:

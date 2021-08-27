@@ -8,7 +8,10 @@ for i in range(True):
     Enter = input('Mời nhập chuỗi: ')
     if len(Enter) > 0:
         break
-size = int(input('Mời nhập số ký tự ban đầu: '))
+size = int(input('Mời nhập số ký tự ban đầu(k): '))
+if size > len(Enter):
+    print('Cảnh báo Key đang lớn hơn độ dài chuỗi!!!')
+    exit()
 #Xử lý mã hóa
 def coding():
     Sb = Enter[None:size]
@@ -25,7 +28,7 @@ def encoding():
     Se_code = Se[::-1] #Đảo ngược ký tự chuỗi
     Q = Sb_code + Se_code
     print('Chuỗi sau khi mã hóa là:',Q)
-if Request == 0:
+if Request == 0 and len(size) <= len(Enter):
     coding()
-else:
+elif Request == 1 and len(size) <= len(Enter):
     encoding()
